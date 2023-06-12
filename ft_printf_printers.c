@@ -20,11 +20,11 @@ int ft_printpointvoid(void *parameter)
 int ft_printdecimal10(int parameter)
 {
     int i;
+    char *str;
 
     i = 0;
-    ft_putnbr_fd(parameter);
-    while(parameter /= 10)
-            i++;
+    str = ft_itoa(parameter);
+    i = ft_printstr(str); 
     return(i);
 }
 

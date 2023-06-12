@@ -1,23 +1,23 @@
 #include "libftprintf.h"
 
 //ft that choose wich printer use and give the variable a type
-int ft_format(va_list parameters, const char format)
+int ft_format(va_list parameter, const char format)
 {
     int written;
 
     written = 0;
     if(format == 'c') //aff 1 char
-        written += ft_printchar(va_args(parameters, char));
+        written += ft_printchar(va_args(parameter, char));
     else if (format == 's') //aff str
-        written += ft_printstr(va_args(parameters, char*));
+        written += ft_printstr(va_args(parameter, char*));
     else if(format == 'p') //arg void* aff en hexa
-        written += ft_printpointvoid(va_args(parameters, void*));
+        written += ft_printpointvoid(va_args(parameter, void*));
     else if(format == 'd' || format == 'i') //nombre decimal || entier base 10
-        written += ft_printdecimal10(va_args(parameters, int));
+        written += ft_printdecimal10(va_args(parameter, int));
     else if(format == 'u') //aff unsigned nombre decimal base 10
-        written += ft_printunsigned10(va_args(parameters,unsigned int));
+        written += ft_printunsigned10(va_args(parameter,unsigned int));
     else if(format == 'x' || format == "X") //aff nombre hexa lettre min || maj
-        written += ft_printhexamin(va_args(parameters, unsigned int), format);
+        written += ft_printhexamin(va_args(parameter, unsigned int), format);
     else if(format == '%') //aff signe %
         written += ft_printpercent();
     return(written);
