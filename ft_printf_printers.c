@@ -6,7 +6,7 @@ int ft_printchar(char parameter)
     return(1);
 }
 
-int ft_printstr(char* parameter)
+int ft_printstr(char *parameter)
 {
     if(parameter == NULL)
         return(ft_printf("(null)"));

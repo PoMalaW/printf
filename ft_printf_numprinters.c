@@ -48,7 +48,7 @@ int ft_printhexa(unsigned int parameter, const char format)
         {
             if(format == 'X')
                 written += ft_printchar((parameter - 10 + 'A'));
-            if(format == 'x' || format == 'p')
+            if(format == 'x')
                 written += ft_printchar((parameter - 10 + 'a'));
         }
     }
