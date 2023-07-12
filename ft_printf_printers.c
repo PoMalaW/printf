@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_printchar(char parameter)
 {
@@ -7,35 +7,11 @@ int ft_printchar(char parameter)
 }
 
 int ft_printstr(char* parameter)
-{    
+{
+    if(parameter == NULL)
+        return(ft_printf("(null)"));
     ft_putstr_fd(parameter, 1);
     return(ft_strlen(parameter));
-}
-
-int ft_printpointvoid(void *parameter)
-{
-
-}
-
-int ft_printdecimal10(int parameter)
-{
-    int i;
-    char *str;
-
-    i = 0;
-    str = ft_itoa(parameter);
-    i = ft_printstr(str); 
-    return(i);
-}
-
-int ft_printunsigned10(unsigned int parameter)
-{
-    
-}
-
-int ft_printhexamin(unsigned int parameter, const char format)
-{
-
 }
 
 int ft_printpercent()
